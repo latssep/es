@@ -2,6 +2,15 @@
 #include <libopencm3/stm32/gpio.h>
 
 
+class Rcc {
+    public:
+    Rcc () {rcc_clock_setup_pll(&rcc_hse_16mhz_3v3[RCC_CLOCK_3V3_168MHZ]);};
+};
+
+Rcc clock_system;
+
+
+
 //==============================================================================
 int main() {
 
